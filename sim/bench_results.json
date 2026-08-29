@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "implementation": "cpython",
+    "gil_disabled": false,
+    "numpy": "2.3.5",
+    "platform": "darwin",
+    "cpu_count": 16,
+    "timestamp": 1783423518.665796
+  },
+  "headline": {
+    "reserve_confirm_depth3_p50_ns": 2583.0,
+    "reserve_confirm_depth3_p99_ns": 6708.0,
+    "throughput_1_thread_ops_s": 288397.42909957573,
+    "throughput_32_thread_ops_s": 379045.59641158214,
+    "p99_at_32_threads_ns": 4625.0,
+    "root_serialization_ratio_32_over_1": 1.31431683560781
+  },
+  "exp1_latency_vs_depth": {
+    "1": {
+      "reserve_confirm": {
+        "n": 200000,
+        "mean_ns": 2525.522085,
+        "p50_ns": 1750.0,
+        "p90_ns": 2083.0,
+        "p99_ns": 5542.0,
+        "min_ns": 1542.0,
+        "max_ns": 10604792.0
+      },
+      "reserve_cancel": {
+        "n": 200000,
+        "mean_ns": 2165.436195,
+        "p50_ns": 1709.0,
+        "p90_ns": 2083.0,
+        "p99_ns": 5500.0,
+        "min_ns": 1500.0,
+        "max_ns": 1983958.0
+      }
+    },
+    "2": {
+      "reserve_confirm": {
+        "n": 200000,
+        "mean_ns": 3725.12617,
+        "p50_ns": 2208.0,
+        "p90_ns": 2750.0,
+        "p99_ns": 20458.0,
+        "min_ns": 1958.0,
+        "max_ns": 7977125.0
+      },
+      "reserve_cancel": {
+        "n": 200000,
+        "mean_ns": 3869.423165,
+        "p50_ns": 2208.0,
+        "p90_ns": 2667.0,
+        "p99_ns": 14833.01000000001,
+        "min_ns": 1916.0,
+        "max_ns": 18657834.0
+      }
+    },
+    "3": {
+      "reserve_confirm": {
+        "n": 200000,
+        "mean_ns": 3058.49183,
+        "p50_ns": 2583.0,
+        "p90_ns": 2750.0,
+        "p99_ns": 6708.0,
+        "min_ns": 2042.0,
+        "max_ns": 5434958.0
+      },
+      "reserve_cancel": {
+        "n": 200000,
+        "mean_ns": 2407.11741,
+        "p50_ns": 2250.0,
+        "p90_ns": 2625.0,
+        "p99_ns": 3750.0,
+        "min_ns": 2000.0,
+        "max_ns": 543125.0
+      }
+    },
+    "4": {
+      "reserve_confirm": {
+        "n": 200000,
+        "mean_ns": 5270.94367,
+        "p50_ns": 3041.0,
+        "p90_ns": 3792.0,
+        "p99_ns": 21625.0,
+        "min_ns": 2750.0,
+        "max_ns": 26143625.0
+      },
+      "reserve_cancel": {
+        "n": 200000,
+        "mean_ns": 2947.057395,
+        "p50_ns": 2875.0,
+        "p90_ns": 3000.0,
+        "p99_ns": 4542.0,
+        "min_ns": 2250.0,
+        "max_ns": 795042.0
+      }
+    },
+    "5": {
+      "reserve_confirm": {
+        "n": 200000,
+        "mean_ns": 7166.643515,
+        "p50_ns": 3500.0,
+        "p90_ns": 4416.0,
+        "p99_ns": 39042.41000000038,
+        "min_ns": 3167.0,
+        "max_ns": 18398667.0
+      },
+      "reserve_cancel": {
+        "n": 200000,
+        "mean_ns": 6157.63739,
+        "p50_ns": 3333.0,
+        "p90_ns": 4167.0,
+        "p99_ns": 28167.410000000382,
+        "min_ns": 3000.0,
+        "max_ns": 34141000.0
+      }
+    }
+  },
+  "exp2_contention_shared_root": {
+    "1": {
+      "concurrency": 1,
+      "total_ops": 200000,
+      "wall_ns": 693487458.0,
+      "ops_per_sec": 288397.42909957573,
+      "ops_per_sec_all_runs": [
+        270013.1043164807,
+        288397.42909957573,
+        360679.7731684907
+      ],
+      "latency": {
+        "n": 200000,
+        "mean_ns": 3233.362165,
+        "p50_ns": 2541.0,
+        "p90_ns": 2709.0,
+        "p99_ns": 10334.0,
+        "min_ns": 2250.0,
+        "max_ns": 5903542.0
+      }
+    },
+    "2": {
+      "concurrency": 2,
+      "total_ops": 400000,
+      "wall_ns": 1466248208.0,
+      "ops_per_sec": 272805.1074965065,
+      "ops_per_sec_all_runs": [
+        210674.52709338514,
+        272805.1074965065,
+        346586.2373791997
+      ],
+      "latency": {
+        "n": 400000,
+        "mean_ns": 6792.49646,
+        "p50_ns": 2541.0,
+        "p90_ns": 3125.0,
+        "p99_ns": 12083.0,
+        "min_ns": 2250.0,
+        "max_ns": 40144875.0
+      }
+    },
+    "4": {
+      "concurrency": 4,
+      "total_ops": 800000,
+      "wall_ns": 4223076959.0,
+      "ops_per_sec": 189435.33536491252,
+      "ops_per_sec_all_runs": [
+        179121.83671015492,
+        189435.33536491252,
+        248526.5418190332
+      ],
+      "latency": {
+        "n": 800000,
+        "mean_ns": 18895.80241375,
+        "p50_ns": 2542.0,
+        "p90_ns": 3209.0,
+        "p99_ns": 30416.0,
+        "min_ns": 2250.0,
+        "max_ns": 103501458.0
+      }
+    },
+    "8": {
+      "concurrency": 8,
+      "total_ops": 1600000,
+      "wall_ns": 5151971542.0,
+      "ops_per_sec": 310560.7216492657,
+      "ops_per_sec_all_runs": [
+        86235.2335284486,
+        310560.7216492657,
+        337064.3666418963
+      ],
+      "latency": {
+        "n": 1600000,
+        "mean_ns": 23770.318155625,
+        "p50_ns": 2458.0,
+        "p90_ns": 2666.0,
+        "p99_ns": 5084.0,
+        "min_ns": 1542.0,
+        "max_ns": 227320583.0
+      }
+    },
+    "16": {
+      "concurrency": 16,
+      "total_ops": 3200000,
+      "wall_ns": 10920526459.0,
+      "ops_per_sec": 293026.1660931891,
+      "ops_per_sec_all_runs": [
+        262151.758014266,
+        293026.1660931891,
+        350207.8524644359
+      ],
+      "latency": {
+        "n": 3200000,
+        "mean_ns": 44198.1655128125,
+        "p50_ns": 2084.0,
+        "p90_ns": 2542.0,
+        "p99_ns": 4458.0,
+        "min_ns": 1417.0,
+        "max_ns": 380377750.0
+      }
+    },
+    "32": {
+      "concurrency": 32,
+      "total_ops": 6400000,
+      "wall_ns": 16884512208.0,
+      "ops_per_sec": 379045.59641158214,
+      "ops_per_sec_all_runs": [
+        331243.85458609555,
+        379045.59641158214,
+        476542.8099962708
+      ],
+      "latency": {
+        "n": 6400000,
+        "mean_ns": 79068.07906796875,
+        "p50_ns": 2167.0,
+        "p90_ns": 2583.0,
+        "p99_ns": 4625.0,
+        "min_ns": 1542.0,
+        "max_ns": 164368375.0
+      }
+    }
+  },
+  "exp3_memory": {
+    "depth": 3,
+    "n_reservations": 100000,
+    "tracemalloc_bytes_per_reservation": 244.3704,
+    "getsizeof_record_shallow_bytes": 225,
+    "ledger_object_bytes": 80,
+    "steady_state_curve": [
+      {
+        "n_reservations": 1000,
+        "table_bytes": 213912,
+        "bytes_per_res": 213.912
+      },
+      {
+        "n_reservations": 5000,
+        "table_bytes": 1063504,
+        "bytes_per_res": 212.7008
+      },
+      {
+        "n_reservations": 10000,
+        "table_bytes": 2132440,
+        "bytes_per_res": 213.244
+      },
+      {
+        "n_reservations": 50000,
+        "table_bytes": 11818656,
+        "bytes_per_res": 236.37312
+      },
+      {
+        "n_reservations": 100000,
+        "table_bytes": 23639784,
+        "bytes_per_res": 236.39784
+      }
+    ]
+  },
+  "analytical": {
+    "fit_reserve_confirm_p50": {
+      "intercept_ns": 1316.4999999999989,
+      "slope_ns_per_level": 433.3000000000001
+    },
+    "model": "reserve/confirm/cancel are O(path-depth d): each touches every ledger on the path once under its lock (a compare + a few float adds), so serial cost is a + b*d with b ~= per-ledger lock+arithmetic cost. Under concurrency, only principals whose paths share an ancestor contend, and they contend ONLY on the shared ancestors' locks. In the worst case (all paths share the tenant root) the root critical section is serialized: with a root critical section of duration s seconds, the ceiling is 1/s ops/s regardless of core count -- Amdahl on the shared root. Sibling subtrees that share no ancestor scale independently."
+  }
+}

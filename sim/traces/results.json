@@ -1,0 +1,207 @@
+{
+  "density": {
+    "tau-bench": {
+      "n_trajectories": 1980,
+      "mean_calls_per_traj": 7.215,
+      "mean_external_per_traj": 1.538,
+      "median_external_per_traj": 1.0,
+      "max_external_in_a_traj": 8,
+      "mean_effect_density": 0.2211,
+      "frac_traj_with_any_effect": 0.8874
+    },
+    "agentdojo": {
+      "n_trajectories": 36472,
+      "mean_calls_per_traj": 3.767,
+      "mean_external_per_traj": 0.863,
+      "median_external_per_traj": 1.0,
+      "max_external_in_a_traj": 56,
+      "mean_effect_density": 0.2286,
+      "frac_traj_with_any_effect": 0.5057
+    },
+    "agentdojo_benign": {
+      "n_trajectories": 3560,
+      "mean_calls_per_traj": 3.26,
+      "mean_external_per_traj": 0.785,
+      "median_external_per_traj": 1.0,
+      "max_external_in_a_traj": 16,
+      "mean_effect_density": 0.2649,
+      "frac_traj_with_any_effect": 0.511
+    }
+  },
+  "within_traj_burstiness": {
+    "tau-bench": {
+      "n_traj_used": 758,
+      "mean_burstiness_B": -0.2469,
+      "median_burstiness_B": -0.2,
+      "frac_bursty_B_gt_0": 0.0818,
+      "mean_fano_5win": 0.9558,
+      "mean_rel_position_of_effects": 0.8732,
+      "note": "B: -1 periodic, 0 Poisson, +1 bursty. Fano>1 => over-dispersed vs Poisson."
+    },
+    "agentdojo": {
+      "n_traj_used": 5842,
+      "mean_burstiness_B": -0.4291,
+      "median_burstiness_B": -0.4614,
+      "frac_bursty_B_gt_0": 0.0312,
+      "mean_fano_5win": 0.6613,
+      "mean_rel_position_of_effects": 0.8073,
+      "note": "B: -1 periodic, 0 Poisson, +1 bursty. Fano>1 => over-dispersed vs Poisson."
+    }
+  },
+  "cross_agent_taubench": {
+    "retail": {
+      "n_tasks_ge3trials": 115,
+      "n_trials": 1380,
+      "marginal_rate_any_effect_q": 0.8971,
+      "concentration_observed": 0.9333,
+      "concentration_null_mean": 0.8971,
+      "concentration_null_sd": 0.0001,
+      "z_score_vs_null": 280.54,
+      "mean_within_task_count_CV": 0.3765,
+      "per_class_concentration": {
+        "pay": {
+          "marginal_rate": 0.0101,
+          "concentration_obs": 0.9986,
+          "concentration_null": 0.9899,
+          "z_vs_null": null,
+          "frac_tasks_fleet_near_unanimous": 1.0
+        },
+        "refund": {
+          "marginal_rate": 0.4804,
+          "concentration_obs": 0.9181,
+          "concentration_null": 0.6137,
+          "z_vs_null": 34.53,
+          "frac_tasks_fleet_near_unanimous": 0.7478
+        },
+        "delete": {
+          "marginal_rate": 0.1696,
+          "concentration_obs": 0.9681,
+          "concentration_null": 0.8307,
+          "z_vs_null": 198.24,
+          "frac_tasks_fleet_near_unanimous": 0.9217
+        },
+        "update": {
+          "marginal_rate": 0.3572,
+          "concentration_obs": 0.9514,
+          "concentration_null": 0.6638,
+          "z_vs_null": 51.04,
+          "frac_tasks_fleet_near_unanimous": 0.8696
+        },
+        "send": {
+          "marginal_rate": 0.0754,
+          "concentration_obs": 0.9551,
+          "concentration_null": 0.9246,
+          "z_vs_null": null,
+          "frac_tasks_fleet_near_unanimous": 0.8783
+        }
+      },
+      "mean_within_task_firsteffect_position_CV": 0.1012,
+      "interpretation": "concentration>>null and low count-CV => a shared trigger drives correlated effects across the fleet"
+    },
+    "airline": {
+      "n_tasks_ge3trials": 50,
+      "n_trials": 600,
+      "marginal_rate_any_effect_q": 0.865,
+      "concentration_observed": 0.8783,
+      "concentration_null_mean": 0.865,
+      "concentration_null_sd": 0.0003,
+      "z_score_vs_null": 40.1,
+      "mean_within_task_count_CV": 0.5366,
+      "per_class_concentration": {
+        "pay": {
+          "marginal_rate": 0.05,
+          "concentration_obs": 0.9533,
+          "concentration_null": 0.95,
+          "z_vs_null": null,
+          "frac_tasks_fleet_near_unanimous": 0.88
+        },
+        "delete": {
+          "marginal_rate": 0.21,
+          "concentration_obs": 0.8833,
+          "concentration_null": 0.7911,
+          "z_vs_null": 44.73,
+          "frac_tasks_fleet_near_unanimous": 0.72
+        },
+        "create": {
+          "marginal_rate": 0.1383,
+          "concentration_obs": 0.955,
+          "concentration_null": 0.8618,
+          "z_vs_null": 141.82,
+          "frac_tasks_fleet_near_unanimous": 0.9
+        },
+        "update": {
+          "marginal_rate": 0.3217,
+          "concentration_obs": 0.9117,
+          "concentration_null": 0.69,
+          "z_vs_null": 33.29,
+          "frac_tasks_fleet_near_unanimous": 0.72
+        },
+        "send": {
+          "marginal_rate": 0.2983,
+          "concentration_obs": 0.825,
+          "concentration_null": 0.7093,
+          "z_vs_null": 22.68,
+          "frac_tasks_fleet_near_unanimous": 0.46
+        }
+      },
+      "mean_within_task_firsteffect_position_CV": 0.171,
+      "interpretation": "concentration>>null and low count-CV => a shared trigger drives correlated effects across the fleet"
+    }
+  },
+  "shared_trigger_agentdojo": {
+    "benign": {
+      "n": 3560,
+      "mean_external_per_traj": 0.7851,
+      "frac_with_any_effect": 0.511,
+      "security_pass_rate": 1,
+      "attack_success_rate": 0
+    },
+    "attacked": {
+      "n": 19174,
+      "mean_external_per_traj": 0.8436,
+      "frac_with_any_effect": 0.4878,
+      "security_pass_rate": 0.1734,
+      "attack_success_rate": 0.8266
+    },
+    "external_effect_lift_attacked_vs_benign": 1.075,
+    "n_shared_triggers_ge20runs": 35,
+    "mean_per_trigger_success_rate": 0.8365,
+    "max_per_trigger_success_rate": 1,
+    "fleet_alignment_concentration": 0.8392,
+    "per_suite_attack_success": {
+      "workspace": {
+        "attacked_runs": 8433,
+        "successful_injections": 7649,
+        "rate": 0.907
+      },
+      "banking": {
+        "attacked_runs": 3986,
+        "successful_injections": 3065,
+        "rate": 0.7689
+      },
+      "slack": {
+        "attacked_runs": 2835,
+        "successful_injections": 1679,
+        "rate": 0.5922
+      },
+      "travel": {
+        "attacked_runs": 3920,
+        "successful_injections": 3456,
+        "rate": 0.8816
+      }
+    },
+    "interpretation": "one planted instruction drives the same irreversible effect across many heterogeneous agents; per-trigger attack-success rate = degree of correlated fleet response"
+  },
+  "provenance": {
+    "tau-bench": {
+      "repo": "github.com/sierra-research/tau-bench",
+      "path": "historical_trajectories/{gpt-4o,sonnet-35-new}-{retail,airline}.json",
+      "n_trajectories": 1980
+    },
+    "agentdojo": {
+      "repo": "github.com/ethz-spylab/agentdojo",
+      "path": "runs/<model>/<suite>/<user_task>/<attack>/<injection>.json",
+      "n_trajectories": 36472
+    }
+  }
+}

@@ -1,0 +1,11 @@
+[run]
+source =
+    sim
+    figures
+omit =
+    tests/*
+
+[report]
+show_missing = True
+skip_covered = True
+fail_under = 80
